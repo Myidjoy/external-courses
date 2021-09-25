@@ -1,5 +1,9 @@
-function theMaximumValue(array) {
-  const positiveNumbers = array.sort((a, b) => a - b).filter((item) => item > 0);
-  return positiveNumbers[positiveNumbers.length - 1];
+function getMaxValue(array) {
+  array.sort((a, b) => a - b);
+  let newArray = array.filter((item) => item > 0);
+  newArray = newArray[newArray.length - 1];
+
+  return newArray;
 }
-module.exports = theMaximumValue;
+
+module.exports = getMaxValue;

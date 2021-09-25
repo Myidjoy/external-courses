@@ -10,6 +10,8 @@ function evenOrOdd(arr) {
       if (item % 2 === 1) { unEven += 1; }
     }
   });
+
   return [even, unEven, zero];
 }
+
 module.exports = evenOrOdd;

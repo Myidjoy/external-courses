@@ -1,5 +1,5 @@
 function similarElements(array) {
-  const result = array.every((item) => item === array[0]);
-  return result;
+  return array.every((item) => item === array[0]);
 }
+
 module.exports = similarElements;
