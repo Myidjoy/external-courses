@@ -3,4 +3,5 @@ function keyAndValue(object) {
     console.log(...key);
   }
 }
+
 module.exports = keyAndValue;

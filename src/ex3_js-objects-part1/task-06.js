@@ -10,6 +10,8 @@ function cloneObject(theObject) {
       cloneTheObject[key] = cloneObject(cloneTheObject[key]);
     }
   }
+
   return cloneTheObject;
 }
+
 module.exports = cloneObject;
