@@ -12,4 +12,5 @@ function elementsCount(string) {
     console.log(`${props} is ${countElem[props]}`);
   }
 }
+
 module.exports = elementsCount;
