@@ -6,6 +6,8 @@ function filter(array, callback) {
       newArray[newArray.length] = item;
     }
   }
+
   return newArray;
 }
+
 module.exports = filter;

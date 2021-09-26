@@ -12,6 +12,8 @@ function reduceArray(array, callback, initialValue) {
     const currentItem = array[i];
     previousValue = callback(previousValue, currentItem, i, array);
   }
+
   return previousValue;
 }
+
 module.exports = reduceArray;

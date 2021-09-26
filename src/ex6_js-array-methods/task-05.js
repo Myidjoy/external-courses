@@ -4,6 +4,8 @@ function map(array, callback) {
     const item = array[i];
     newArray[i] = callback(item, i, array);
   }
+
   return newArray;
 }
+
 module.exports = map;

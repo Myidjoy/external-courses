@@ -5,6 +5,7 @@ function someArray(array, callback) {
       return true;
     }
   }
+
   return false;
 }
 

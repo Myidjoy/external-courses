@@ -42,6 +42,7 @@ function sliceMethod(array, begin, end) {
   if (begin === undefined && end === undefined) {
     return array;
   }
+
   return sliceArray;
 }
 
