@@ -28,4 +28,5 @@ const Calculator = {
     return Calculator.result;
   },
 };
+
 module.exports = Calculator;
