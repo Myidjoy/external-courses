@@ -1,6 +1,6 @@
 function keyAndValue(object) {
   for (const key of Object.entries(object)) { // eslint-disable-line
-    console.log(...key);
+    console.log(key);
   }
 }
 

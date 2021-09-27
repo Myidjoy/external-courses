@@ -1,10 +1,9 @@
 function checkProperty(property, object) {
-  const newObject = object;
-  const keys = Object.keys(newObject);
-  const result = keys.some((item) => item.toLocaleLowerCase() === property.toLocaleLowerCase());
-  if (!result) newObject[property] = 'new'; // eslint-disable-line
+  const result = Object.keys(object).some((item) => item === property);
 
-  return newObject;
+  if (!result) object[property] = 'new'; // eslint-disable-line
+
+  return object;
 }
 
 module.exports = checkProperty;
