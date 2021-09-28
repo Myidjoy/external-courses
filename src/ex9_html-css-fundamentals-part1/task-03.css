@@ -1,7 +1,8 @@
-.wrapper{
+.wrapper {
     margin: 20% auto 0 auto;
     max-width: 300px;
 }
+
 .button {
     position: relative;
     width: 262px;
@@ -10,7 +11,8 @@
     border-radius: 14px;
     border: 2px solid white;
 }
-.button::before{
+
+.button::before {
     content: '';
     position: absolute;
     top: -4px;
@@ -20,7 +22,8 @@
     border: 2px solid #888888;
     border-radius: 15px;
 }
- button{
+
+button {
     position: absolute;
     top: 6px;
     left: 6px;
@@ -37,14 +40,17 @@
     font-weight: bold;
     text-shadow: 0 1px 1px white;
 }
-button::before{
-    content:"\2605";
+
+button::before {
+    content: "\2605";
     margin-right: 12px;
 }
-button::after{
-    content:"\2605";
+
+button::after {
+    content: "\2605";
     margin-left: 12px;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
 }
