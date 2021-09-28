@@ -1,0 +1,50 @@
+.wrapper{
+    margin: 20% auto 0 auto;
+    max-width: 300px;
+}
+.button {
+    position: relative;
+    width: 262px;
+    height: 72px;
+    background-color: #c7c7c7;
+    border-radius: 14px;
+    border: 2px solid white;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 266px;
+    height: 76px;
+    border: 2px solid #888888;
+    border-radius: 15px;
+}
+ button{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 250px;
+    height: 60px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #535353;
+    outline: 0;
+    text-transform: uppercase;
+    color: #4e4e4e;
+    background: linear-gradient(#dadada, #9c9c9c);
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px white;
+}
+button::before{
+    content:"\2605";
+    margin-right: 12px;
+}
+button::after{
+    content:"\2605";
+    margin-left: 12px;
+}
+button:hover{
+    cursor: pointer;
+}
