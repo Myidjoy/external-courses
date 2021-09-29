@@ -1,5 +1,5 @@
 function checkProperty(property, object) {
-  return Object.keys(object).some((item) => item === property);
+  return object.hasOwnProperty(property);
 }
 
 module.exports = checkProperty;

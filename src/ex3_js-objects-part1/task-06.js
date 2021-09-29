@@ -1,19 +1,23 @@
 function cloneObject(theObject) {
   let cloneTheObject = null;
 
-  if (Array.isArray(theObject)) cloneTheObject = [];
-  else cloneTheObject = {};
+  if (Array.isArray(theObject)) {
+    cloneTheObject = [];
+  } else cloneTheObject = {};
 
-  for (const key in theObject) {        // eslint-disable-line
-
+  // eslint-disable-next-line
+  for (const key in theObject) {        
     if (theObject.hasOwnProperty(key)) {
       cloneTheObject[key] = theObject[key];
     }
   }
 
-  for (const key in cloneTheObject) {   // eslint-disable-line
+  // eslint-disable-next-line
+  for (const key in cloneTheObject) {
+    const isTypeObject = typeof (cloneTheObject[key]) === 'object' || typeof (cloneTheObject[key]) === 'function';
+    const isOwnProperty = cloneTheObject.hasOwnProperty(key);
 
-    if ((typeof (cloneTheObject[key]) === 'object' || typeof (cloneTheObject[key]) === 'function') && cloneTheObject.hasOwnProperty(key)) {
+    if (isTypeObject && isOwnProperty) {
       cloneTheObject[key] = cloneObject(cloneTheObject[key]);
     }
   }
