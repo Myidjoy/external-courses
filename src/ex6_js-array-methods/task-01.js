@@ -3,10 +3,9 @@ function sliceMethod(array, begin, end) {
 
   if (begin < 0 && end < 0) {
     if (end * -1 > array.length) {
-      // eslint-disable-next-line
-      end = 0;
+      const newEnd = end;
 
-      for (let i = end; i <= (array.length + begin); i += 1) {
+      for (let i = newEnd; i <= (array.length + begin); i += 1) {
         sliceArray.push(array[i]);
       }
     }
