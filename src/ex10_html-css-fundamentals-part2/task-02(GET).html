@@ -11,74 +11,74 @@
       <fieldset>
         <legend>Personal data</legend>
         <p>
-          <label>Surname<input type="text" name="surname" /></label>
+          <label for="surname">Surname</label
+          ><input id="surname" type="text" name="surname" />
         </p>
         <p>
-          <label>First name<input type="text" name="fistName" /></label>
+          <label for="firstName">First name</label>
+          <input id="firstName" type="text" name="fistName" />
         </p>
         <p>
-          <label>Middle name <input type="text" name="middleName" /></label>
+          <label for="middleName">Middle name </label>
+          <input id="middleName" type="text" name="middleName" />
         </p>
         <p>
-          You are<label
-            ><input type="radio" name="gender" value="male" />male</label
-          ><label
-            ><input type="radio" name="gender" value="female" />female</label
-          >
+          <label>You are</label>
+          <input id="gender" type="radio" name="gender" value="male" />
+          <label for="gender">male</label>
+          <input id="female" type="radio" name="gender" value="female" />
+          <label for="female">female</label>
         </p>
         <p>
-          <label
-            >Age <input type="number" min="18" max="101" name="age"
-          /></label>
+          <label for="age">Age</label>
+          <input id="age" type="number" min="18" max="101" name="age" />
         </p>
         <p>
-          <label
-            >Country of Residence
-            <select name="country" id="country">
-              <option value="Russia">Russia</option>
-              <option value="USA">USA</option>
-              <option value="Germany">Germany</option>
-              <option value="GreatBritain">Great Britain</option>
-              <option value="Сhina">Сhina</option>
-              <option value="Сanada">Сanada</option>
-            </select></label
-          >
+          <label for="country">Country of Residence</label>
+          <select name="country" id="country">
+            <option value="Russia">Russia</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="GreatBritain">Great Britain</option>
+            <option value="Сhina">Сhina</option>
+            <option value="Сanada">Сanada</option>
+          </select>
         </p>
         <p>
-          City<label><input type="checkbox" />Ryazan</label
-          ><label><input type="checkbox" />Moscow</label>
+          <label>City</label>
+          <input id="ryazan" type="checkbox" />
+          <label for="ryazan">Ryazan</label>
+          <input id="moscow" type="checkbox" />
+          <label for="moscow">Moscow</label>
         </p>
         <p>
-          <label>Photography <input type="file" name="photo" /></label>
+          <label for="photo">Photography </label>
+          <input id="photo" type="file" name="photo" />
         </p>
         <hr />
         <p>
-          <label
-            >Title
-            <select name="knowledge" multiple size="9">
-              <optgroup label="Technologies">
-                <option value="webmaster">Web Master</option>
-                <option value="databaseadministrator">
-                  Database Administrator
-                </option>
-                <option value="computeraideddesign">
-                  Computer-aided design
-                </option>
-              </optgroup>
-              <optgroup label="Finance">
-                <option value="economicplanning">Economoc Planning</option>
-                <option value="managmentaccounting">
-                  Management accounting
-                </option>
-                <option value="budgetingandplanning">
-                  Budgeting and planning
-                </option>
-              </optgroup>
-            </select></label
+          <label>Title</label>
+          <select name="knowledge" multiple size="9">
+            <optgroup label="Technologies">
+              <option value="webmaster">Web Master</option>
+              <option value="databaseadministrator">
+                Database Administrator
+              </option>
+              <option value="computeraideddesign">Computer-aided design</option>
+            </optgroup>
+            <optgroup label="Finance">
+              <option value="economicplanning">Economoc Planning</option>
+              <option value="managmentaccounting">Management accounting</option>
+              <option value="budgetingandplanning">
+                Budgeting and planning
+              </option>
+            </optgroup>
+          </select>
           >
         </p>
         <p>
-          <label>Salary <input type="range" min="0" /></label>
+          <label>Salary </label>
+          <input type="range" min="0" />
         </p>
         <textarea name="aboutYouSelf" id="aboutYouSelf" cols="50" rows="10">
 Tell us about yor self...</textarea
@@ -87,17 +87,21 @@ Tell us about yor self...</textarea
       <fieldset>
         <legend>Contact Information</legend>
         <p>
-          <label>Site <input type="text" name="Site" /></label>
+          <label for="site">Site</label>
+          <input id="site" type="text" name="Site" />
         </p>
         <p>
-          <label>Email <input type="text" name="Email" /></label>
+          <label for="email">Email</label>
+          <input id="email" type="text" name="Email" />
         </p>
         <p>
-          <label>Phone <input type="text" name="Phone" /></label>
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" name="Phone" />
         </p>
       </fieldset>
       <p>
-        <label>Password <input type="password" required /></label>
+        <label for="password">Password</label>
+        <input id="password" type="password" required />
       </p>
       <input type="submit" value="Отправить" />
       <input type="reset" value="Сбросить" />
