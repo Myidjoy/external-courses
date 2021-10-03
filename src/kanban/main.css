@@ -1,0 +1,153 @@
+.header {
+    height: 55px;
+    background-color: #0067A3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.header-buttons {
+    display: flex;
+    width: 295px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    width: 45px;
+    height: 45px;
+    background-image: url("logo.svg");
+}
+
+.logo--padding {
+    padding: 0 0 0 80px;
+}
+
+.create-list {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.create-list, .create-list__button {
+    width: 181px;
+    height: 33px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+}
+
+.create-list__button {
+    font-size: 18px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.create-list__icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: black;
+    left: 5px;
+    z-index: 1;
+}
+
+.create-list__icon::before, .create-list__icon::after {
+    content: '';
+    width: 14px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+.create-list__icon::after {
+    transform: rotate(90deg);
+}
+
+.user-menu-btn {
+    width: 64px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    background-image: url("user-avatar.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative
+}
+
+.user-menu-btn:hover {
+    cursor: pointer;
+}
+
+.user-menu-btn--closed::before, .user-menu-btn--closed::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    width: 9px;
+    height: 2px;
+    background-color: white;
+}
+
+.user-menu-btn--closed::before {
+    transform: rotate(45deg);
+    right: 11px;
+}
+
+.user-menu-btn--closed::after {
+    transform: rotate(-45deg);
+    right: 6px;
+}
+
+.user-menu-btn--opened::before, .user-menu-btn--opened::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    width: 9px;
+    height: 2px;
+    background-color: white;
+}
+
+.user-menu-btn--opened::before {
+    transform: rotate(-45deg);
+    right: 11px;
+}
+
+.user-menu-btn--opened::after {
+    transform: rotate(45deg);
+    right: 6px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background-color: #0067A3;
+    padding: 0 23px 0 65px;
+    color: white;
+}
+
+.footer__tasks-monitoring {
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+}
