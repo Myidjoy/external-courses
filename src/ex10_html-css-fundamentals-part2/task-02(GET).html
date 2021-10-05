@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="http://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Personal data</legend>
+        <p>
+          <label for="surname">Surname</label
+          ><input id="surname" type="text" name="surname" />
+        </p>
+        <p>
+          <label for="firstName">First name</label>
+          <input id="firstName" type="text" name="fistName" />
+        </p>
+        <p>
+          <label for="middleName">Middle name </label>
+          <input id="middleName" type="text" name="middleName" />
+        </p>
+        <p>
+          <label>You are</label>
+          <input id="gender" type="radio" name="gender" value="male" />
+          <label for="gender">male</label>
+          <input id="female" type="radio" name="gender" value="female" />
+          <label for="female">female</label>
+        </p>
+        <p>
+          <label for="age">Age</label>
+          <input id="age" type="number" min="18" max="101" name="age" />
+        </p>
+        <p>
+          <label for="country">Country of Residence</label>
+          <select name="country" id="country">
+            <option value="Russia">Russia</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="GreatBritain">Great Britain</option>
+            <option value="Сhina">Сhina</option>
+            <option value="Сanada">Сanada</option>
+          </select>
+        </p>
+        <p>
+          <label>City</label>
+          <input id="ryazan" type="checkbox" />
+          <label for="ryazan">Ryazan</label>
+          <input id="moscow" type="checkbox" />
+          <label for="moscow">Moscow</label>
+        </p>
+        <p>
+          <label for="photo">Photography </label>
+          <input id="photo" type="file" name="photo" />
+        </p>
+        <hr />
+        <p>
+          <label>Title</label>
+          <select name="knowledge" multiple size="9">
+            <optgroup label="Technologies">
+              <option value="webmaster">Web Master</option>
+              <option value="databaseadministrator">
+                Database Administrator
+              </option>
+              <option value="computeraideddesign">Computer-aided design</option>
+            </optgroup>
+            <optgroup label="Finance">
+              <option value="economicplanning">Economoc Planning</option>
+              <option value="managmentaccounting">Management accounting</option>
+              <option value="budgetingandplanning">
+                Budgeting and planning
+              </option>
+            </optgroup>
+          </select>
+          >
+        </p>
+        <p>
+          <label>Salary </label>
+          <input type="range" min="0" />
+        </p>
+        <textarea name="aboutYouSelf" id="aboutYouSelf" cols="50" rows="10">
+Tell us about yor self...</textarea
+        >
+      </fieldset>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <p>
+          <label for="site">Site</label>
+          <input id="site" type="text" name="Site" />
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input id="email" type="text" name="Email" />
+        </p>
+        <p>
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" name="Phone" />
+        </p>
+      </fieldset>
+      <p>
+        <label for="password">Password</label>
+        <input id="password" type="password" required />
+      </p>
+      <input type="submit" value="Отправить" />
+      <input type="reset" value="Сбросить" />
+    </form>
+  </body>
+</html>

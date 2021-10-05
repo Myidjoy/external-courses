@@ -1,0 +1,30 @@
+.myTable {
+    font-size: 0.9rem;
+    border-spacing: 2px;
+    color: #546c89;
+    font-family: sans-serif;
+}
+
+.myTable tr {
+    line-height: 50px;
+}
+
+.myTable tr:nth-child(2n) {
+    background: #f2f5fa;
+}
+
+.myTable tr:nth-child(2n+1) {
+    background: #e9eef4;
+}
+
+.myTable td {
+    padding: 0 15px;
+}
+
+.myTable tr:not(:first-child):hover {
+    background: #e2e5e9;
+}
+
+.myTable td:first-child:first-letter {
+    text-transform: uppercase;
+}
