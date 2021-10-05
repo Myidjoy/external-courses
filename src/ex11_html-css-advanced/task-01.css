@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+/*loading*/
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.ring:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+}
+
+.ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: ring 3s linear infinite;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8;
+    }
+}
+
+.center span {
+    color: #737373;
+    font-size: 20px;
+    text-transform: uppercase;
+    animation: text 3s ease-in-out infinite;
+}
+
+@keyframes text {
+    50% {
+        color: black;
+    }
+}
+
+/*ball*/
+
+.container {
+    display: flex;
+}
+
+.square-1 {
+    height: 200px;
+    width: 100px;
+    background: rgb(184, 184, 184);
+}
+
+.square-2 {
+    height: 200px;
+    width: 100px;
+    background: rgb(184, 184, 184);
+}
+
+.container_ball {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 1300px;
+}
+
+.ball {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: #808080;
+    border-radius: 50%;
+    animation: motion 3s infinite;
+}
+
+@keyframes motion {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 96%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/*infinite*/
+
+.infinite {
+    margin: 40px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #9fb2dd, #0456c8);
+    animation: inf 4s infinite;
+}
+
+@keyframes inf {
+    0% {
+        border-radius: 50%;
+        background-image: linear-gradient(#aeade2, #8a3f8a);
+    }
+    15% {
+        background-image: linear-gradient(#5f628d, #43b3b3);
+        border-radius: 0;
+    }
+    30% {
+        width: 100px;
+        height: 100px;
+        background-image: linear-gradient(#2a0a64, #9c61aa);
+    }
+    45% {
+        width: 80px;
+        height: 15px;
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(360deg);
+        background-image: linear-gradient(#FFB3D1, #22998E);
+    }
+    85% {
+        width: 80px;
+        height: 15px;
+        border-radius: 0;
+        background-image: linear-gradient(#3b5275, #725b51);
+    }
+    100% {
+        transform: rotate(360deg);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Floated Label</title>
+    <link rel="stylesheet" href="task-02.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menuButton"></div>
+      <h1>New Post</h1>
+      <div></div>
+    </header>
+    <main>
+      <div class="options">
+        <div>Location</div>
+        <div>Category</div>
+      </div>
+      <form action="#" method="get">
+        <div class="content">
+          <div>
+            <input type="text" placeholder="Title" id="title" required />
+            <label for="title">Title</label>
+          </div>
+          <div>
+            <div id="priceWrapper">
+              <input type="text" id="price" placeholder="Price" required />
+              <label for="price">Price</label>
+            </div>
+            <div class="specLocation">
+              <input
+                type="text"
+                id="specLocation"
+                placeholder="Specific Location (optional)"
+                required
+              />
+              <label for="specLocation">Specific Location (optional)</label>
+            </div>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="description"
+              placeholder="Description"
+              required
+            />
+            <label for="description">Description</label>
+          </div>
+          <input type="submit" id="submit" value="Next" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

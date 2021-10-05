@@ -1,0 +1,122 @@
+body {
+    width: 650px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #f9f9f9;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.options div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 60px;
+    border: 1px solid #c7c7c7;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    margin: 20px 0 0 0;
+    color: #79808f;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 40px 0 0 20px;
+}
+
+.content input {
+    border: 0;
+    height: 80px;
+    font-size: 22px;
+    outline: none;
+}
+
+.content input:focus {
+    border: 0;
+}
+
+.content>div:not(:nth-child(3)) {
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.content div {
+    display: flex;
+    position: relative;
+}
+
+#priceWrapper {
+    position: relative;
+    width: 190px;
+}
+
+#priceWrapper:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 82px;
+    width: 1px;
+    background-color: #c7c7c7;
+}
+
+#specLocation, .specLocation, #description, #title {
+    width: 100%;
+}
+
+#specLocation {
+    margin-left: 10px;
+}
+
+#submit {
+    position: absolute;
+    top: -200px;
+    right: 15px;
+    background-color: transparent;
+    font-size: 27px;
+    color: #c6c8cd;
+}
+
+#submit, label {
+    transition: all 0.5s;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input:invalid+label {
+    top: 3px;
+    opacity: 0;
+}
+
+input:valid+label {
+    opacity: 1;
+    top: 0;
+}
+
+form:valid #submit, input:focus+label {
+    color: #0379ff;
+}
+
+form:valid #submit:hover {
+    cursor: pointer;
+}
