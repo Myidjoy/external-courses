@@ -7,17 +7,19 @@ let index = 1;
 function clearPageContents() {
   while (document.querySelector('.container__content__elem').childElementCount > 0) {
     document.querySelector('.container__content__elem').firstChild.remove();
+
     containerElement.classList.remove('open');
   }
 }
-function showPicture(n) {
+
+function showPicture(value) {
   clearPageContents();
   setTimeout(() => {
-    if (n > contentElements.length) {
+    if (value > contentElements.length) {
       index = 1;
     }
 
-    if (n < 1) {
+    if (value < 1) {
       index = contentElements.length;
     }
 
@@ -28,8 +30,9 @@ function showPicture(n) {
     containerElement.classList.add('open');
   }, 100);
 }
-function plusSlides(n) {
-  showPicture(index += n);
+
+function plusSlides(value) {
+  showPicture(index += value);
 }
 
 showPicture(index);
