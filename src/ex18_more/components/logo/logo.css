@@ -1,0 +1,14 @@
+.logo{
+    font-size: 28px;
+    color: white;
+    position: relative;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    width: 45px;
+    height: 45px;
+    background-image: url("logo.svg");
+} 
