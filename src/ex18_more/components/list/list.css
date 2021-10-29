@@ -1,4 +1,4 @@
-.list{
+.list {
     box-sizing: border-box;
     min-width: 282px;
     max-width: 282px;
@@ -12,74 +12,86 @@
     padding: 15px 12px 15px 12px;
     overflow: hidden;
 }
-    .list__name{
-        align-self: flex-start;
-        margin: 15px 0 0 12px
-    }
-    .list__name-input{
-        border: none;
-        background-color: inherit;
-        font-size: 18px;
-        width: 206px;
-    }
-    .list__menu-btn{
-        align-self: flex-end;
-        margin: -32px 0 12px 0;
-        border: none;
-        font-size: 28px;
-        background-color: transparent;
-        letter-spacing: -1px;
-        font-family: serif;
-    }
-        .list__menu-btn:hover{
-            cursor: pointer;
-        }
-    .list__item-wrapper{
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-    .list__item{
-        width: 236px;
-        font-size: 18px;
-        height: fit-content;
-        background-color: #FFFFFF;
-        margin: 0 0 15px 0;
-        padding: 12px 9px;
-        border-radius: 4px;
-    }
-    .list__item:last-child{
-        margin-bottom: 0;
-    }
-    .list__add-card-btn{
-        border: none;
-        color: #5E6C84;
-        padding-left: 12px;
-        padding-top: 12px;
-        margin: 2px 0 0 14px;
-        position: relative;
-        align-self: flex-start;
-    }
-    .list__add-card-btn--disabled{
-        text-decoration: line-through;
-    }
-    .list__add-card-btn--active:hover{
-        cursor: pointer;
-        color: #0079BF;
-    }
-        .list__add-card-btn:before, .list__add-card-btn:after{
-            content: '';
-            position: absolute;
-            background-color: #5E6C84;
-            width: 14px;
-            height: 2px;
-            border-radius: 2px;
-            top: 18px;
-            left: -5px;
-        }
-        .list__add-card-btn::after{
-            transform: rotate(90deg);
-        } 
+
+.list__name {
+    align-self: flex-start;
+    margin: 15px 0 0 12px
+}
+
+.list__name-input {
+    border: none;
+    background-color: inherit;
+    font-size: 18px;
+    width: 206px;
+}
+
+.list__menu-btn {
+    align-self: flex-end;
+    margin: -32px 0 12px 0;
+    border: none;
+    font-size: 28px;
+    background-color: transparent;
+    letter-spacing: -1px;
+    font-family: serif;
+}
+
+.list__menu-btn:hover {
+    cursor: pointer;
+}
+
+.list__item-wrapper {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.list__item {
+    width: 236px;
+    font-size: 18px;
+    height: fit-content;
+    background-color: #FFFFFF;
+    margin: 0 0 15px 0;
+    padding: 12px 9px;
+    border-radius: 4px;
+}
+
+.list__item:last-child {
+    margin-bottom: 0;
+}
+
+.list__add-card-btn {
+    border: none;
+    color: #5E6C84;
+    padding-left: 12px;
+    padding-top: 12px;
+    margin: 2px 0 0 14px;
+    position: relative;
+    align-self: flex-start;
+}
+
+.list__add-card-btn--disabled {
+    text-decoration: line-through;
+}
+
+.list__add-card-btn--active:hover {
+    cursor: pointer;
+    color: #0079BF;
+}
+
+.list__add-card-btn:before, .list__add-card-btn:after {
+    content: '';
+    position: absolute;
+    background-color: #5E6C84;
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    top: 18px;
+    left: -5px;
+}
+
+.list__add-card-btn::after {
+    transform: rotate(90deg);
+}

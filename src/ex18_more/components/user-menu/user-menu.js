@@ -1,4 +1,5 @@
 const userMenuBtn = document.getElementsByClassName('user-menu-btn')[0];
+
 function closeMenu() {
   const userMenu = document.getElementsByClassName('user-menu')[0];
 
@@ -11,10 +12,10 @@ function closeMenu() {
 
   setTimeout(() => {
     userMenu.remove();
-    // eslint-disable-next-line
     userMenuBtn.addEventListener('click', openMenu, { once: true });
   }, 560);
 }
+
 function openMenu() {
   const header = document.getElementsByClassName('header')[0];
   const userMenu = document.createElement('ul');
