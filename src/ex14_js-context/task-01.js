@@ -2,22 +2,26 @@ const Calculator = {
   result: 0,
 
   add(a = 0) {
-    Calculator.result += a;
+    this.result += a;
+
     return this;
   },
 
   subtract(a = 0) {
-    Calculator.result -= a;
+    this.result -= a;
+
     return this;
   },
 
   divide(a = 1) {
-    Calculator.result /= a;
+    this.result /= a;
+
     return this;
   },
 
   multiply(a = 0) {
-    Calculator.result *= a;
+    this.result *= a;
+
     return this;
   },
 
@@ -26,20 +30,17 @@ const Calculator = {
   },
   reset() {
     this.result = 0;
+
     return this;
   },
   setState(value = 0) {
     this.result = value;
+
     return this;
   },
   fetchData(callback) {
-    const promise = new Promise((resolve) => {
-      setTimeout(callback, 0, 500);
-      resolve(500);
-    });
-    promise.then((value) => {
-      this.result = value;
-    });
+    this.callback = setTimeout(() => callback(500), 1000);
+
     return this;
   },
 };
