@@ -19,7 +19,7 @@ function deleteList() {
 
   dataMock.splice(id, 1);
 
-  for (id + 1; id < addCardBtns.length; id += 1) {
+  for (id + 1; id < addCardBtns.length; id++) {
     addCardBtns[id].id = String(Number(addCardBtns[id].id) - 1);
   }
 

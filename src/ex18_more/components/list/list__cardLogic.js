@@ -24,36 +24,30 @@ if (localStorage.getItem('dataMock') === null) {
   ];
   localStorage.setItem('dataMock', JSON.stringify(dataMock));
 }
-// eslint-disable-next-line
-createLists();
-// eslint-disable-next-line
-addEventListeners();
-// eslint-disable-next-line
-checkAddCardBtns();
 
 function createLists() {
   const dataMock = JSON.parse(localStorage.getItem('dataMock'));
 
   if (dataMock.length === 0) {
     getHaveNoListsNotified();
+
     return;
   }
 
-  for (let i = 0; i < dataMock.length; i += 1) {
+  for (let i = 0; i < dataMock.length; i++) {
     const main = document.getElementsByClassName('main')[0];
     const list = document.createElement('div');
-    const listName = document.createElement('div');
-    const listMenuBtn = document.createElement('button');
-    const listItemWrapper = document.createElement('ul');
-
     list.classList.add('list');
 
+    const listName = document.createElement('div');
     listName.classList.add('list__name');
     listName.innerHTML = `${dataMock[i].title}`;
 
+    const listMenuBtn = document.createElement('button');
     listMenuBtn.classList.add('list__menu-btn');
     listMenuBtn.innerHTML = '...';
 
+    const listItemWrapper = document.createElement('ul');
     listItemWrapper.classList.add('list__item-wrapper');
 
     main.append(list);
@@ -61,25 +55,24 @@ function createLists() {
     list.append(listMenuBtn);
     list.append(listItemWrapper);
 
-    for (let y = 0; y < dataMock[i].issues.length; y += 1) {
+    for (let y = 0; y < dataMock[i].issues.length; y++) {
       const listItem = document.createElement('li');
-
       listItem.classList.add('list__item');
       listItem.innerHTML = dataMock[i].issues[y].name;
-
       listItemWrapper.append(listItem);
     }
 
     const addCardBtn = document.createElement('button');
-
     addCardBtn.classList.add('list__add-card-btn');
     addCardBtn.innerHTML = 'Add card';
     addCardBtn.id = `${i}`;
-
     list.append(addCardBtn);
   }
+
   checkActiveAndFinishedTasks();
 }
+
+createLists();
 
 function addEventListeners() {
   const dataMock = JSON.parse(localStorage.getItem('dataMock'));
@@ -91,15 +84,17 @@ function addEventListeners() {
   const backlogAddCardBtn = document.getElementsByClassName('list__add-card-btn')[0];
 
   backlogAddCardBtn.classList.add('list__add-card-btn--active');
-  // eslint-disable-next-line
+
   backlogAddCardBtn.addEventListener('click', addCardBacklog);
 
   const addCardBtns = document.getElementsByClassName('list__add-card-btn');
-  for (let i = 1; i < addCardBtns.length; i += 1) {
-    // eslint-disable-next-line
+
+  for (let i = 1; i < addCardBtns.length; i++) {
     addCardBtns[i].addEventListener('click', addCard);
   }
 }
+
+addEventListeners();
 
 function addCardBacklog() {
   const backlog = document.getElementsByClassName('list__item-wrapper')[0];
@@ -107,18 +102,19 @@ function addCardBacklog() {
   input.classList.add('list__item');
 
   backlog.append(input);
+
   input.focus();
-  // eslint-disable-next-line
+
   input.addEventListener('blur', addTask);
-  // eslint-disable-next-line
+
   input.addEventListener('keydown', addTaskPressEnter);
 
   function addTaskPressEnter(e) {
     if (e.code === 'Enter') {
-      // eslint-disable-next-line
       addTask();
     }
   }
+
   function addTask() {
     input.removeEventListener('blur', addTask);
     input.removeEventListener('keydown', addTaskPressEnter);
@@ -129,7 +125,6 @@ function addCardBacklog() {
     }
 
     const li = document.createElement('li');
-
     li.classList.add('list__item');
     li.innerHTML = `${input.value}`;
 
@@ -145,11 +140,13 @@ function addCardBacklog() {
     localStorage.setItem('dataMock', JSON.stringify(dataMock));
 
     const addCardBtns = document.getElementsByClassName('list__add-card-btn');
+
     if (dataMock.length > 1) {
       addCardBtns[1].classList.remove('list__add-card-btn--disabled');
       addCardBtns[1].classList.add('list__add-card-btn--active');
       addCardBtns[1].disabled = false;
     }
+
     checkActiveAndFinishedTasks();
   }
 }
@@ -165,7 +162,7 @@ function addCard() {
   const id = this.id;
   const previousListIndex = id - 1;
 
-  for (let taskIndex = 0; taskIndex < dataMock[previousListIndex].issues.length; taskIndex += 1) {
+  for (let taskIndex = 0; taskIndex < dataMock[previousListIndex].issues.length; taskIndex++) {
     const option = document.createElement('option');
 
     option.innerHTML = dataMock[previousListIndex].issues[taskIndex].name;
@@ -176,7 +173,7 @@ function addCard() {
   }
 
   select.focus();
-  // eslint-disable-next-line
+
   select.addEventListener('blur', addTask, { once: true });
 
   function addTask() {
@@ -205,7 +202,7 @@ function addCard() {
     });
 
     localStorage.setItem('dataMock', JSON.stringify(dataMock));
-    // eslint-disable-next-line
+
     checkAddCardBtns();
 
     checkActiveAndFinishedTasks();
@@ -216,7 +213,7 @@ function checkAddCardBtns() {
   const dataMock = JSON.parse(localStorage.getItem('dataMock'));
   const addCardBtns = document.getElementsByClassName('list__add-card-btn');
 
-  for (let i = 1; i < dataMock.length; i += 1) {
+  for (let i = 1; i < dataMock.length; i++) {
     if (dataMock[i - 1].issues.length === 0) {
       addCardBtns[i].disabled = true;
       addCardBtns[i].classList.remove('list__add-card-btn--active');
@@ -228,5 +225,7 @@ function checkAddCardBtns() {
     }
   }
 }
+
+checkAddCardBtns();
 
 export { addCardBacklog, addCard, checkAddCardBtns };

@@ -6,13 +6,10 @@ import { openMenu } from '../../list/list__menu/list__openMenu.js';
 import { checkActiveAndFinishedTasks } from '../../list/list__checkActiveAndFinishedTasks.js';
 
 const createListBtn = document.getElementsByClassName('create-list__button')[0];
-// eslint-disable-next-line
-createListBtn.onclick = createList;
 
 function createList() {
   const main = document.getElementsByClassName('main')[0];
   const list = document.createElement('div');
-
   list.classList.add('list');
 
   const input = document.createElement('input');
@@ -27,7 +24,7 @@ function createList() {
   list.append(listMenuBtn);
 
   input.focus();
-  // eslint-disable-next-line
+
   input.addEventListener('blur', finishCreateList);
 
   const dataMock = JSON.parse(localStorage.getItem('dataMock'));
@@ -72,12 +69,11 @@ function createList() {
     addCardBtn.classList.add('list__add-card-btn', 'list__add-card-btn--active');
     addCardBtn.innerHTML = 'Add card';
     addCardBtn.id = '0';
-
     list.append(addCardBtn);
 
     const addCardBtns = document.getElementsByClassName('list__add-card-btn');
 
-    for (let i = 1; i < addCardBtns.length; i += 1) {
+    for (let i = 1; i < addCardBtns.length; i++) {
       addCardBtns[i].id = String(Number(addCardBtns[i].id) + 1);
     }
 
@@ -100,3 +96,5 @@ function createList() {
     checkActiveAndFinishedTasks();
   }
 }
+
+createListBtn.onclick = createList;
