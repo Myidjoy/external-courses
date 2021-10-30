@@ -14,6 +14,7 @@ module.exports = {
     'no-plusplus': 'off',
     'no-use-before-define': ['error', { functions: false, classes: true }],
     'import/prefer-default-export': 0,
+    'import/extensions': 0,
     'max-classes-per-file': 0,
     complexity: [0, 11],
     'no-prototype-builtins': 0,
