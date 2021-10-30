@@ -1,6 +1,4 @@
-// eslint-disable-next-line
 import { checkActiveAndFinishedTasks } from './list__checkActiveAndFinishedTasks.js';
-// eslint-disable-next-line
 import { getHaveNoListsNotified } from './list__haveNoLists.js';
 
 if (localStorage.getItem('dataMock') === null) {

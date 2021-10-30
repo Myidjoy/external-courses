@@ -1,8 +1,5 @@
-// eslint-disable-next-line
 import { addCardBacklog, addCard, checkAddCardBtns } from '../../list/list__cardLogic.js';
-// eslint-disable-next-line
 import { openMenu } from '../../list/list__menu/list__openMenu.js';
-// eslint-disable-next-line
 import { checkActiveAndFinishedTasks } from '../../list/list__checkActiveAndFinishedTasks.js';
 
 const createListBtn = document.getElementsByClassName('create-list__button')[0];
