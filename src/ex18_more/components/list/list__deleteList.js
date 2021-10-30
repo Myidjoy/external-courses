@@ -1,8 +1,5 @@
-// eslint-disable-next-line
 import { addCard, addCardBacklog, checkAddCardBtns } from './list__cardLogic.js';
-// eslint-disable-next-line
 import { checkActiveAndFinishedTasks } from './list__checkActiveAndFinishedTasks.js';
-// eslint-disable-next-line
 import { getHaveNoListsNotified } from './list__haveNoLists.js';
 
 function deleteList() {

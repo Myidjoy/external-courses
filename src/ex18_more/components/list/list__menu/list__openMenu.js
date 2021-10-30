@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import { deleteList } from '../list__deleteList.js';
 
 const listMenuBtns = document.getElementsByClassName('list__menu-btn');
