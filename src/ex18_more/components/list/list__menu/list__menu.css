@@ -1,0 +1,36 @@
+.list__menu{
+    list-style: none;
+    padding: 0 12px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    background-color: #EBECF0;
+    width: 95px;
+    text-align: center;
+    border: 2px solid white;
+    border-right: none;
+    border-radius: 8px 0 0 8px ;
+    font-size: 18px;
+    animation: open-list-menu ease 0.8s;
+}
+.list__menu > *{
+    padding: 12px;
+}
+.list__menu > *:hover{
+    cursor: pointer;
+}
+.list__menu--close{
+    animation: close-list-menu ease-out 0.6s;
+}
+
+@keyframes open-list-menu{
+    from{
+        right: -100px;
+    }
+}
+@keyframes close-list-menu{
+    to{
+        right: -100px;
+    }
+} 

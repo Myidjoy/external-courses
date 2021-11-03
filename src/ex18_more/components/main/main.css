@@ -1,0 +1,31 @@
+body{
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+.main{
+    height: calc(100vh - 110px);
+    background-color: #0079BF;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #CBCBCB;
+    border-radius: 8px;
+}
+.list{
+    margin: 20px 5px 20px  19px;
+}
+.list:first-child{
+    margin-left: 50px;
+}
+.list:last-child{
+    margin-right: 50px;
+} 

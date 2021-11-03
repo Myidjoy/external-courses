@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background-color: #0067A3;
+    padding: 0 23px 0 65px;
+    color: white;
+}
+.footer__tasks-monitoring{
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+
+}
+.footer__author\&Year{
+
+} 
