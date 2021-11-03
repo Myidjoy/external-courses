@@ -1,0 +1,60 @@
+.frame_one div, .frame_one {
+    width: 400px;
+    height: 200px;
+}
+
+.frame_one {
+    margin: 20px 0 0 20px;
+    position: relative;
+    background-color: #bfe3d1;
+}
+
+.frame_one div {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #90cdaf;
+}
+
+.frame_one div+div {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #60b88d;
+}
+
+.frame_two {
+    width: 400px;
+    height: 200px;
+    background-color: #60b88d;
+    box-shadow: 10px 10px #90cdaf, 20px 20px #bfe3d1;
+    margin-bottom: 20px;
+}
+
+.frame_three, .frame_three::after, .frame_three::before {
+    width: 400px;
+    height: 200px;
+}
+
+.frame_three {
+    position: relative;
+    background-color: #60b88d;
+}
+
+.frame_three::before, .frame_three::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.frame_three::before {
+    top: 20px;
+    left: 20px;
+    background-color: #bfe3d1;
+}
+
+.frame_three::after {
+    top: 10px;
+    left: 10px;
+    background-color: #90cdaf;
+}
