@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Awesome Kanban Board</div>
+      <div class="header-buttons">
+        <div class="create-list">
+          <button class="create-list__button">Create new list</button>
+          <div class="create-list__icon"></div>
+        </div>
+        <button class="user-menu-btn user-menu-btn--closed">&gt;</button>
+      </div>
+    </header>
+    <main class="main"></main>
+    <footer class="footer">
+      <div class="footer__tasks-monitoring">
+        <div class="tasks-active">Active tasks: &lt;N&gt;</div>
+        <div class="tasks-finished">Finished tasks: &lt;M&gt;</div>
+      </div>
+      <div class="footer__author&Year">
+        Kanban board by Deviatov Evgenii, 2021
+      </div>
+    </footer>
+
+    <script src="components/user-menu/user-menu.js"></script>
+    <script type="module" src="components/list/list__cardLogic.js"></script>
+
+    <script
+      type="module"
+      src="components/buttons/create-list/createList.js"
+    ></script>
+
+    <script
+      type="module"
+      src="components/list/list__menu/list__openMenu.js"
+    ></script>
+  </body>
+</html>

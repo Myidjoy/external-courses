@@ -1,0 +1,11 @@
+@import "components/main/main.css";
+@import "components/list/list.css";
+@import "components/footer/footer.css";
+@import "components/header/header.css";
+@import "components/logo/logo.css";
+@import "components/buttons/create-list/create-list.css";
+@import "components/buttons/user-menu-btn/user-menu-btn.css";
+@import "components/header/header-buttons.css";
+@import "components/user-menu/user-menu.css";
+@import "components/list/list__menu/list__menu.css";
+@import "components/main/have-no-list-notified.css"; 

@@ -1,0 +1,55 @@
+.create-list {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.create-list, .create-list__button {
+    width: 181px;
+    height: 33px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+}
+
+.create-list__button {
+    font-size: 18px;
+    text-align: right;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.create-list__button::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+}
+
+.create-list__icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: black;
+    left: 5px;
+    z-index: 1;
+}
+
+.create-list__icon::before, .create-list__icon::after {
+    content: '';
+    width: 14px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+.create-list__icon::after {
+    transform: rotate(90deg);
+}
