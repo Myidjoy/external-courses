@@ -1,3 +1,21 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+/*main*/
+
+.main {
+    height: calc(100vh - 110px);
+    background-color: #0079BF;
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/*header*/
+
 .header {
     height: 55px;
     background-color: #0067A3;
@@ -14,6 +32,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/*logo*/
 
 .logo {
     font-size: 28px;
@@ -34,6 +54,8 @@
 .logo--padding {
     padding: 0 0 0 80px;
 }
+
+/*create-list*/
 
 .create-list {
     display: flex;
@@ -94,6 +116,8 @@
     position: relative
 }
 
+/*user-menu-btn*/
+
 .user-menu-btn:hover {
     cursor: pointer;
 }
@@ -135,6 +159,8 @@
     transform: rotate(45deg);
     right: 6px;
 }
+
+/*footer*/
 
 .footer {
     position: fixed;
