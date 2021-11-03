@@ -1,7 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-}
+body {}
 
 .header {
     height: 55px;
@@ -139,19 +136,6 @@ body {
 .user-menu-btn--opened::after {
     transform: rotate(45deg);
     right: 6px;
-}
-
-.create-list__button {
-    cursor: pointer;
-}
-
-.create-list__button::before {
-    content: '';
-    position: absolute;
-    left: 5px;
-    width: 24px;
-    height: 24px;
-    z-index: 2;
 }
 
 .footer {
