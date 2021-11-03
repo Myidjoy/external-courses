@@ -10,10 +10,8 @@ function closeMenu() {
 
   userMenu.classList.add('user-menu--close');
 
-  setTimeout(() => {
-    userMenu.remove();
-    userMenuBtn.addEventListener('click', openMenu, { once: true });
-  }, 560);
+  userMenu.onanimationend = () => userMenu.remove();
+  userMenuBtn.addEventListener('click', openMenu, { once: true });
 }
 
 function openMenu() {
