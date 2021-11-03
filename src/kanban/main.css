@@ -120,8 +120,8 @@
 .user-menu-btn--opened::before, .user-menu-btn--opened::after {
     content: '';
     position: absolute;
-    top: 18px;
     width: 9px;
+    top: 18px;
     height: 2px;
     background-color: white;
 }
